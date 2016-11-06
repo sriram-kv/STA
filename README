@@ -1,0 +1,60 @@
+====================================================================================
+Static Timing Analyzer
+======================
+
+Author: Sriram Kuppahalli Venkatesha
+Email:  kuppa010@umn.edu
+
+Instructor: Prof.Sachin Sapatnekar
+TA: Deepashree Sengupta
+====================================================================================
+
+Steps to compile and run:
+==================================
+
+1.  make 
+    Compile the code and generates a new binary (remove the old binary).
+2.  ./parser read_ckt <netlist file> : to get the fanin/fanout details
+    ./parser read_nldm delays <nldm file> : to print cell delay LUTs 
+    ./parser read_nldm slews <nldm file>  : to print cell slew LUTs 
+    ./parser <netlist> : to print slack and critical path information. 
+    ./parser : to print the usage
+   This assumes that the NLDM file is in the current directory with name "library.txt"
+
+====================================================================================
+
+Organization:
+=============
+LICENSE.txt
+README
+makefile
+nldm.lib
+src/
+    |
+    -------> parser.cpp
+    |
+    -------> Library.cpp
+    |
+    -------> Nelist.cpp
+    |
+    -------> Dfs.cpp
+
+include/
+    |
+    -------> Common.h
+    |
+    -------> Library.h
+    |
+    -------> Netlist.h
+    |
+    -------> Dfs.h
+
+data/
+    |
+    -------> c7552
+    |
+    -------> c17
+    |
+    -------> b15.bench
+	
+====================================================================================
